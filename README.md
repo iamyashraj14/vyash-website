@@ -5,6 +5,7 @@ Single-page company website for Vyash Cybersecurity: Aadhaar compliance support,
 ## Structure
 
 - `index.html` — the whole site (HTML, CSS and JS in one file). Fonts load from Google Fonts; no build step.
+- `assets/` — Vyash logo, monogram and wordmark (transparent PNGs cut from the brand logo).
 
 ## Run locally
 

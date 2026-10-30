@@ -6,278 +6,324 @@
 <style>[hidden]{display:none!important}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
 <title>Vyash Cybersecurity</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Vyash Cybersecurity Private Limited: Aadhaar compliance support, ISO 27001 implementation, DPDP readiness, regulatory compliance, VAPT and security advisory.">
+<meta name="description" content="Vyash Cybersecurity Private Limited: VAPT, Aadhaar compliance support, ISO 27001, DPDP readiness, regulatory compliance and security advisory for Indian organisations.">
+<link rel="icon" href="assets/vyash-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <style>
-/* Layout: an audit ledger. Left-aligned sections separated by hairline rules, control IDs in mono as the recurring motif, one live evidence register in the hero. */
+/* Layout: a security operations console. Deep navy ground taken from the brand mark, cyan/magenta channel split as the signal colours, live network canvas behind the hero, terminal and ledger panels carrying the content. Single dark theme by design. */
 :root{
-  --paper:#F2F5F4;
-  --surface:#FFFFFF;
-  --tint:#E5EDEB;
-  --ink:#0E2427;
-  --ink-2:#4B5F62;
-  --rule:#D2DCDA;
-  --accent:#B8581A;
-  --accent-ink:#FFFFFF;
-  --accent-soft:#F7E6D8;
-  --pass:#1B7556;
-  --pass-soft:#DDEFE7;
-  --warn:#946708;
-  --warn-soft:#F5EBD2;
-  --gap:#AA3D2A;
-  --gap-soft:#F6E0DA;
-  --band:#0E2427;
-  --band-fg:#E6EFED;
-  --band-2:#9DB4B2;
-  --font-display:"Archivo","Arial Narrow",Arial,sans-serif;
-  --font-body:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bg:#060A15;
+  --bg-2:#0A1122;
+  --panel:#0D1529;
+  --panel-2:#111B33;
+  --line:#1C2945;
+  --line-2:#2A3A5E;
+  --fg:#E9EEF8;
+  --muted:#8C99B8;
+  --dim:#5D6A88;
+  --cyan:#22E3F0;
+  --magenta:#FF2E93;
+  --pass:#2BD99A;
+  --warn:#FFB547;
+  --gap:#FF5D73;
+  --font-display:"Chakra Petch","Arial Narrow",Arial,sans-serif;
+  --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --s-1:.8125rem;--s0:1rem;--s1:1.125rem;--s2:1.375rem;--s3:1.75rem;--s4:2.5rem;--s5:clamp(2.4rem,6.2vw,4.6rem);
-  --radius:6px;
+  --r:8px;
+  color-scheme:dark;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#0B1618;--surface:#11201F;--tint:#152826;--ink:#E2EBE9;--ink-2:#98ADAB;--rule:#23393A;
-  --accent:#EE9450;--accent-ink:#1B0E04;--accent-soft:#3A2414;
-  --pass:#52C79C;--pass-soft:#14322A;--warn:#E3B24E;--warn-soft:#352A12;--gap:#F07C66;--gap-soft:#3A1C17;
-  --band:#081112;--band-fg:#E2EBE9;--band-2:#8EA6A4;color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#0B1618;--surface:#11201F;--tint:#152826;--ink:#E2EBE9;--ink-2:#98ADAB;--rule:#23393A;
-  --accent:#EE9450;--accent-ink:#1B0E04;--accent-soft:#3A2414;
-  --pass:#52C79C;--pass-soft:#14322A;--warn:#E3B24E;--warn-soft:#352A12;--gap:#F07C66;--gap-soft:#3A1C17;
-  --band:#081112;--band-fg:#E2EBE9;--band-2:#8EA6A4;color-scheme:dark}
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:var(--s0);line-height:1.6;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
 a{color:inherit}
-h1,h2,h3{font-family:var(--font-display);font-stretch:125%;line-height:1.05;letter-spacing:-.01em;text-wrap:balance;margin:0}
-h2{font-size:var(--s4);font-weight:800}
-h3{font-size:var(--s1);font-weight:700;font-stretch:112%;letter-spacing:0;line-height:1.25}
+h1,h2,h3{font-family:var(--font-display);margin:0;line-height:1.05;text-wrap:balance}
+h2{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.2rem;font-weight:600;line-height:1.25}
 p{margin:0}
-.mono{font-family:var(--font-mono);font-size:var(--s-1);letter-spacing:.01em}
-.eyebrow{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500}
-.lede{font-size:var(--s1);color:var(--ink-2);max-width:62ch}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
-
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+::selection{background:var(--magenta);color:#fff}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:3px}
+.mono{font-family:var(--font-mono)}
+.eyebrow{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:18px;height:1px;background:currentColor}
+.lede{font-size:1.125rem;color:var(--muted);max-width:62ch}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 @media (max-width:480px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
-.band{border-top:1px solid var(--rule)}
-.band>.wrap{padding-block:clamp(56px,8vw,104px);display:grid;gap:40px}
-.head{display:grid;gap:14px;max-width:760px}
+.sec{position:relative;border-top:1px solid var(--line)}
+.sec>.wrap{padding-block:clamp(64px,9vw,112px);display:grid;gap:44px}
+.head{display:grid;gap:16px;max-width:780px}
+.grad{background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* reveal: visible at rest, plays when it scrolls into view */
+@keyframes rise{from{opacity:.2;transform:translateY(18px)}to{opacity:1;transform:none}}
+.reveal.in{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;gap:10px;font:600 .9375rem/1 var(--font-body);padding:14px 20px;border-radius:var(--radius);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
-.btn-primary{background:var(--accent);color:var(--accent-ink)}
-.btn-primary:hover{transform:translateY(-1px)}
-.btn-ghost{border-color:var(--rule);color:var(--ink);background:transparent}
-.btn-ghost:hover{background:var(--tint)}
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;font:600 .9375rem/1 var(--font-display);letter-spacing:.04em;text-transform:uppercase;padding:15px 22px;border-radius:4px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s ease}
+.btn-primary{background:var(--cyan);color:#041018;box-shadow:0 0 0 0 rgba(34,227,240,.0)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:-3px 0 0 var(--magenta),0 10px 30px -8px rgba(34,227,240,.55)}
+.btn-ghost{border-color:var(--line-2);color:var(--fg);background:rgba(13,21,41,.6)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
 
 /* Header */
-.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
-.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand svg{width:32px;height:32px;flex:none}
-.brand-name{font-family:var(--font-display);font-stretch:125%;font-weight:800;font-size:1.125rem;letter-spacing:.02em;line-height:1}
-.brand-sub{display:block;font-family:var(--font-mono);font-size:.625rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-top:4px;font-weight:400}
-.nav{display:flex;align-items:center;gap:26px}
-.nav a{text-decoration:none;font-size:.9375rem;color:var(--ink-2);font-weight:500}
-.nav a:hover{color:var(--ink)}
-.nav .btn{color:var(--accent-ink);padding:11px 16px}
-.nav-toggle{display:none;background:none;border:1px solid var(--rule);border-radius:var(--radius);padding:9px 12px;color:var(--ink);font:600 .875rem var(--font-body);cursor:pointer}
-@media (max-width:900px){
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(6,10,21,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mk{height:40px;width:auto;flex:none}
+.brand .wm{display:grid;gap:3px}
+.brand .wm img{height:17px;width:auto}
+.brand .wm span{font-family:var(--font-mono);font-size:.5625rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-family:var(--font-display);font-weight:500;font-size:.9375rem;letter-spacing:.04em;color:var(--muted);transition:color .15s}
+.nav a:hover{color:var(--cyan)}
+.nav .btn{color:#041018;padding:11px 16px;font-size:.8125rem}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-2);border-radius:4px;padding:9px 12px;color:var(--fg);font:600 .8125rem var(--font-mono);letter-spacing:.08em;cursor:pointer}
+@media (max-width:940px){
   .nav-toggle{display:inline-flex}
-  .nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:8px max(16px,env(safe-area-inset-right,0px)) 18px max(16px,env(safe-area-inset-left,0px))}
-  .nav a{padding:12px 0;border-bottom:1px solid var(--rule)}
+  .nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg-2);border-bottom:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-right,0px)) 18px max(16px,env(safe-area-inset-left,0px))}
+  .nav a{padding:13px 0;border-bottom:1px solid var(--line)}
   .nav .btn{margin-top:14px;justify-content:center;border-bottom:0}
 }
 
 /* Hero */
-.hero .wrap{padding-block:clamp(48px,7vw,96px) clamp(48px,6vw,80px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(32px,5vw,72px);align-items:center}
-@media (max-width:920px){.hero .wrap{grid-template-columns:1fr}}
-.hero h1{font-size:var(--s5);font-weight:850;letter-spacing:-.02em}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-copy{display:grid;gap:24px;min-width:0}
+.hero{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(1200px 600px at 78% 20%,rgba(255,46,147,.10),transparent 60%),radial-gradient(900px 600px at 10% 90%,rgba(34,227,240,.10),transparent 60%),var(--bg)}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(34,227,240,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(34,227,240,.045) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 80%)}
+.hero .wrap{padding-block:clamp(56px,8vw,104px) clamp(56px,7vw,96px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(36px,5vw,72px);align-items:center}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}}
+.hero-copy{display:grid;gap:26px;min-width:0}
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line-2);border-radius:999px;padding:7px 14px;background:rgba(13,21,41,.7);justify-self:start}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--pass);box-shadow:0 0 0 0 rgba(43,217,154,.7);animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(43,217,154,.6)}70%{box-shadow:0 0 0 10px rgba(43,217,154,0)}100%{box-shadow:0 0 0 0 rgba(43,217,154,0)}}
+.hero h1{font-size:clamp(3rem,7.4vw,5.6rem);font-weight:700;letter-spacing:-.02em;line-height:.98;text-transform:uppercase}
+.hero h1 .row{display:block}
+.glitch{position:relative;display:inline-block;color:var(--fg)}
+.glitch::before,.glitch::after{content:attr(data-text);position:absolute;inset:0;pointer-events:none}
+.glitch::before{color:var(--cyan);transform:translate(-3px,0);mix-blend-mode:screen;animation:gl1 3.2s infinite steps(1)}
+.glitch::after{color:var(--magenta);transform:translate(3px,0);mix-blend-mode:screen;animation:gl2 3.2s infinite steps(1)}
+@keyframes gl1{0%,86%,100%{clip-path:inset(0 0 0 0);transform:translate(-2px,0)}88%{clip-path:inset(12% 0 60% 0);transform:translate(-8px,-1px)}90%{clip-path:inset(55% 0 20% 0);transform:translate(6px,1px)}92%{clip-path:inset(30% 0 45% 0);transform:translate(-5px,0)}94%{clip-path:inset(75% 0 5% 0);transform:translate(4px,0)}}
+@keyframes gl2{0%,86%,100%{clip-path:inset(0 0 0 0);transform:translate(2px,0)}88%{clip-path:inset(62% 0 10% 0);transform:translate(8px,1px)}90%{clip-path:inset(8% 0 70% 0);transform:translate(-6px,0)}92%{clip-path:inset(40% 0 35% 0);transform:translate(5px,-1px)}94%{clip-path:inset(18% 0 62% 0);transform:translate(-4px,0)}}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.hero-facts{display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--ink-2);font-size:.875rem}
-.hero-facts span{display:inline-flex;align-items:center;gap:8px}
-.hero-facts span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--pass)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--font-mono);font-size:.71875rem;letter-spacing:.04em;padding:6px 10px;border:1px solid var(--line-2);border-radius:4px;background:rgba(13,21,41,.7);color:var(--fg)}
 
-/* Evidence register */
-.register{background:var(--surface);border:1px solid var(--rule);border-radius:10px;overflow:hidden;min-width:0;box-shadow:0 1px 0 var(--rule),0 24px 48px -32px color-mix(in srgb,var(--ink) 40%,transparent)}
-.reg-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--rule);background:var(--tint)}
-.reg-top .mono{color:var(--ink-2)}
-.reg-title{font-weight:700;font-size:.9375rem}
-.reg-rows{list-style:none;margin:0;padding:0}
-.reg-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--rule)}
-.reg-row:last-child{border-bottom:0}
-.reg-id{font-family:var(--font-mono);font-size:.75rem;color:var(--ink-2);width:7.2em}
-.reg-name{font-size:.875rem;font-weight:500;min-width:0}
-.reg-name small{display:block;color:var(--ink-2);font-size:.75rem;font-weight:400}
-.pill{font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.04em;padding:4px 9px;border-radius:999px;white-space:nowrap;transition:background .4s ease,color .4s ease}
-.pill.gap{background:var(--gap-soft);color:var(--gap)}
-.pill.prog{background:var(--warn-soft);color:var(--warn)}
-.pill.ok{background:var(--pass-soft);color:var(--pass)}
-.reg-foot{display:grid;gap:8px;padding:14px 18px;border-top:1px solid var(--rule);background:var(--tint)}
-.meter{height:6px;border-radius:999px;background:var(--rule);overflow:hidden}
-.meter i{display:block;height:100%;background:var(--pass);border-radius:inherit;transition:width .6s ease}
-.reg-foot .mono{display:flex;justify-content:space-between;color:var(--ink-2);font-variant-numeric:tabular-nums}
-@media (max-width:420px){.reg-id{display:none}.reg-row{grid-template-columns:minmax(0,1fr) auto}}
+/* Terminal */
+.term{background:rgba(9,14,28,.92);border:1px solid var(--line-2);border-radius:10px;overflow:hidden;min-width:0;box-shadow:0 30px 80px -30px rgba(34,227,240,.35),-6px 0 40px -20px rgba(255,46,147,.35);position:relative}
+.term::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px)}
+.term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+.term-bar b{width:11px;height:11px;border-radius:50%;background:var(--line-2)}
+.term-bar b:nth-child(1){background:#FF5D73}.term-bar b:nth-child(2){background:#FFB547}.term-bar b:nth-child(3){background:#2BD99A}
+.term-bar span{margin-left:8px;font-family:var(--font-mono);font-size:.75rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.term-bar em{margin-left:auto;font-style:normal;font-family:var(--font-mono);font-size:.6875rem;color:var(--dim);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.term pre{margin:0;padding:18px 18px 20px;font-family:var(--font-mono);font-size:.78rem;line-height:1.75;color:var(--fg);white-space:pre-wrap;overflow-wrap:anywhere;min-height:20.5em}
+.t-p{color:var(--cyan)}.t-d{color:var(--dim)}.t-ok{color:var(--pass)}.t-w{color:var(--warn)}.t-g{color:var(--gap)}.t-m{color:var(--magenta)}
+.caret{display:inline-block;width:.6em;height:1.1em;background:var(--cyan);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
 
-/* Framework strip */
-.strip{background:var(--band);color:var(--band-fg)}
-.strip .wrap{padding-block:22px;display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center}
-.strip .label{font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--band-2)}
-.strip ul{display:flex;flex-wrap:wrap;gap:8px 24px;list-style:none;margin:0;padding:0;font-family:var(--font-display);font-stretch:110%;font-weight:600;font-size:.9375rem}
+/* Ticker */
+.ticker{border-block:1px solid var(--line);background:var(--bg-2);overflow:hidden;position:relative}
+.ticker::before,.ticker::after{content:"";position:absolute;top:0;bottom:0;width:80px;z-index:1;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(90deg,var(--bg-2),transparent)}
+.ticker::after{right:0;background:linear-gradient(-90deg,var(--bg-2),transparent)}
+.track{display:flex;width:max-content;animation:scroll 48s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.track ul{display:flex;list-style:none;margin:0;padding:18px 0;gap:0}
+.track li{font-family:var(--font-display);font-weight:600;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:0 28px;white-space:nowrap;display:flex;align-items:center;gap:28px}
+.track li::after{content:"";width:6px;height:6px;transform:rotate(45deg);background:var(--magenta)}
+@keyframes scroll{to{transform:translateX(-50%)}}
 
-/* Path finder */
-.finder{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px}
-@media (max-width:860px){.finder{grid-template-columns:1fr}}
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel)}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{padding:28px 24px;display:grid;gap:8px;border-right:1px solid var(--line);position:relative}
+.stat:last-child{border-right:0}
+@media (max-width:860px){.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.stat .num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.2rem,4.5vw,3.2rem);line-height:1;font-variant-numeric:tabular-nums;color:var(--fg)}
+.stat .num small{font-size:.45em;color:var(--cyan);margin-left:4px;letter-spacing:.04em}
+.stat b{font-weight:600;font-size:.9375rem}
+.stat p{font-size:.875rem;color:var(--muted)}
+.stat .src{font-family:var(--font-mono);font-size:.6875rem;color:var(--dim);letter-spacing:.06em}
+
+/* Finder */
+.finder{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px}
+@media (max-width:880px){.finder{grid-template-columns:1fr}}
 .finder-opts{display:grid;gap:8px;align-content:start}
-.opt{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);padding:15px 16px;font:500 .9375rem/1.35 var(--font-body);color:var(--ink);cursor:pointer;transition:border-color .15s ease,background .15s ease}
-.opt:hover{border-color:var(--ink-2)}
-.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
-.opt .mono{color:var(--ink-2);font-size:.6875rem}
-.plan{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:clamp(20px,3vw,32px);display:grid;gap:22px;align-content:start;min-width:0}
-.plan h3{font-size:var(--s2)}
-.plan-steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:st}
-.plan-steps li{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--rule);counter-increment:st}
-.plan-steps li::before{content:counter(st,decimal-leading-zero);font-family:var(--font-mono);font-size:.75rem;color:var(--accent);padding-top:3px}
-.plan-steps b{display:block;font-weight:600}
-.plan-steps span{color:var(--ink-2);font-size:.9375rem}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:15px 16px;font:500 .9375rem/1.35 var(--font-body);color:var(--fg);cursor:pointer;transition:border-color .15s,background .15s,transform .15s}
+.opt:hover{border-color:var(--line-2);transform:translateX(3px)}
+.opt[aria-pressed="true"]{border-color:var(--cyan);background:linear-gradient(90deg,rgba(34,227,240,.12),rgba(13,21,41,.6));box-shadow:inset 3px 0 0 var(--cyan)}
+.opt .mono{color:var(--dim);font-size:.6875rem;letter-spacing:.06em}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:clamp(20px,3vw,32px);display:grid;gap:22px;align-content:start;min-width:0}
+.plan h3{font-size:1.6rem}
+.plan.swap{animation:rise .45s ease both}
+.steps{list-style:none;margin:0;padding:0;display:grid;counter-reset:st}
+.steps li{display:grid;grid-template-columns:2.4rem minmax(0,1fr);gap:12px;padding:13px 0;border-top:1px solid var(--line);counter-increment:st}
+.steps li::before{content:counter(st,decimal-leading-zero);font-family:var(--font-mono);font-size:.75rem;color:var(--magenta);padding-top:3px}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted);font-size:.9375rem}
 .deliv{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-family:var(--font-mono);font-size:.71875rem;padding:6px 10px;border:1px solid var(--rule);border-radius:4px;background:var(--paper);color:var(--ink)}
+.deliv .chip{border-color:rgba(34,227,240,.35);color:var(--cyan)}
 
 /* Services */
-.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
-@media (max-width:980px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:620px){.svc-grid{grid-template-columns:1fr}}
-.svc{padding:28px 24px 30px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:grid;gap:14px;align-content:start;background:var(--surface);min-width:0}
-.svc-tag{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.svc-tag .mono{color:var(--ink-2)}
-.svc h3{font-size:1.25rem}
-.svc p{color:var(--ink-2);font-size:.9375rem}
-.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:7px;font-size:.9375rem}
-.svc li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:8px}
-.svc li::before{content:"";width:8px;height:1px;background:var(--accent);margin-top:.8em}
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:1000px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.svc-grid{grid-template-columns:1fr}}
+.svc{--mx:50%;--my:0%;position:relative;padding:26px 24px 28px;border:1px solid var(--line);border-radius:10px;display:grid;gap:14px;align-content:start;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(34,227,240,.10),transparent 45%),var(--panel);min-width:0;transition:border-color .2s,transform .2s}
+.svc:hover{border-color:rgba(34,227,240,.45);transform:translateY(-3px)}
+.svc .ic{width:44px;height:44px;border-radius:8px;display:grid;place-items:center;border:1px solid var(--line-2);background:var(--bg-2);color:var(--cyan)}
+.svc .ic svg{width:22px;height:22px}
+.svc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.svc-top .mono{font-size:.6875rem;color:var(--dim);letter-spacing:.08em;text-transform:uppercase;padding-top:4px}
+.svc p{color:var(--muted);font-size:.9375rem}
+.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:7px;font-size:.9rem}
+.svc li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px}
+.svc li::before{content:"›";font-family:var(--font-mono);color:var(--magenta);font-weight:700}
 
-/* Aadhaar */
-.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px)}
-@media (max-width:860px){.split{grid-template-columns:1fr}}
-.entities{display:grid;gap:0;border-top:1px solid var(--rule)}
-.entity{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--rule)}
-.entity .mono{font-weight:500;color:var(--accent);font-size:.8125rem;padding-top:2px}
-.entity p{color:var(--ink-2);font-size:.9375rem}
-.entity b{color:var(--ink);display:block;font-weight:600}
+/* Aadhaar flow */
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;position:relative}
+.flow::before{content:"";position:absolute;left:8%;right:8%;top:34px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--magenta));opacity:.35}
+.flow .pkt{position:absolute;top:29px;left:8%;width:12px;height:12px;border-radius:2px;background:var(--cyan);box-shadow:0 0 16px var(--cyan);animation:pkt 5s linear infinite}
+@keyframes pkt{0%{left:8%;background:var(--cyan)}50%{background:var(--magenta);box-shadow:0 0 16px var(--magenta)}100%{left:calc(92% - 12px);background:var(--pass);box-shadow:0 0 16px var(--pass)}}
+.hop{position:relative;display:grid;gap:8px;justify-items:start;min-width:0}
+.hop .node{width:68px;height:68px;border-radius:12px;border:1px solid var(--line-2);background:var(--panel);display:grid;place-items:center;color:var(--cyan);position:relative;z-index:1}
+.hop .node svg{width:28px;height:28px}
+.hop b{font-family:var(--font-display);font-weight:600;font-size:1rem}
+.hop span{font-size:.8125rem;color:var(--muted)}
+.hop .tag{font-family:var(--font-mono);font-size:.6875rem;color:var(--pass);border:1px solid rgba(43,217,154,.35);border-radius:3px;padding:3px 7px}
+@media (max-width:900px){.flow{grid-template-columns:1fr;gap:0}.flow::before,.flow .pkt{display:none}.hop{grid-template-columns:68px minmax(0,1fr);column-gap:16px;align-items:center;padding:12px 0;border-bottom:1px dashed var(--line)}.hop .node{grid-row:span 3}}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,48px)}
+@media (max-width:880px){.split{grid-template-columns:1fr}}
+.entities{display:grid;border-top:1px solid var(--line)}
+.entity{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.entity .mono{color:var(--cyan);font-size:.8125rem;font-weight:500;padding-top:2px}
+.entity p{color:var(--muted);font-size:.9375rem}
+.entity b{color:var(--fg);display:block;font-weight:600}
 @media (max-width:480px){.entity{grid-template-columns:1fr;gap:4px}}
-.checklist{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:clamp(20px,3vw,28px);display:grid;gap:16px;align-content:start}
-.checklist ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.checklist li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:.9375rem}
-.checklist li svg{width:18px;height:18px;margin-top:3px;color:var(--pass)}
-.checklist li small{display:block;color:var(--ink-2);font-size:.8125rem}
-.note{font-size:.875rem;color:var(--ink-2);border-left:2px solid var(--accent);padding:4px 0 4px 14px;max-width:70ch}
+.check{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:clamp(20px,3vw,28px);display:grid;gap:16px;align-content:start}
+.check ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.check li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:.9375rem}
+.check li svg{width:18px;height:18px;margin-top:3px;color:var(--pass)}
+.check li small{display:block;color:var(--muted);font-size:.8125rem}
+.note{font-size:.875rem;color:var(--muted);border-left:2px solid var(--magenta);padding:6px 0 6px 16px;max-width:76ch;background:linear-gradient(90deg,rgba(255,46,147,.06),transparent)}
 
 /* ISO */
-.roadmap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;counter-reset:rm;border-top:2px solid var(--ink)}
-@media (max-width:1000px){.roadmap{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:560px){.roadmap{grid-template-columns:1fr}}
-.roadmap li{counter-increment:rm;padding:18px 18px 20px 0;display:grid;gap:8px;align-content:start;position:relative;min-width:0}
-.roadmap li::before{content:counter(rm,decimal-leading-zero);font-family:var(--font-display);font-stretch:125%;font-weight:800;font-size:1.75rem;color:var(--accent);line-height:1}
-.roadmap b{font-weight:700}
-.roadmap span{font-size:.875rem;color:var(--ink-2)}
-.roadmap .mono{color:var(--ink-2);font-size:.6875rem}
-.annex{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:start}
-@media (max-width:860px){.annex{grid-template-columns:1fr}}
-.bars{display:grid;gap:14px}
+.road{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;counter-reset:rm;position:relative}
+.road::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--line-2)}
+.road::after{content:"";position:absolute;left:0;top:0;height:2px;width:100%;background:linear-gradient(90deg,var(--cyan),var(--magenta));transform-origin:left}
+.road.in::after{animation:draw 1.6s ease both}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-width:1000px){.road{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.road{grid-template-columns:1fr}}
+.road li{counter-increment:rm;padding:22px 18px 18px 0;display:grid;gap:8px;align-content:start;min-width:0}
+.road li::before{content:counter(rm,decimal-leading-zero);font-family:var(--font-display);font-weight:700;font-size:2rem;line-height:1;color:var(--cyan)}
+.road b{font-family:var(--font-display);font-weight:600;font-size:1.05rem}
+.road span{font-size:.875rem;color:var(--muted)}
+.road .mono{color:var(--dim);font-size:.6875rem;letter-spacing:.06em}
+.annex{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
+@media (max-width:880px){.annex{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:clamp(20px,3vw,28px);display:grid;gap:16px;min-width:0}
 .bar-row{display:grid;grid-template-columns:9.5rem minmax(0,1fr) 2.4rem;gap:12px;align-items:center;font-size:.875rem}
-.bar-row .mono{color:var(--ink-2);font-size:.6875rem;display:block}
-.bar{height:22px;background:var(--tint);border-radius:3px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--ink);border-radius:3px}
-.bar-row:first-child .bar i{background:var(--accent)}
-.bar-row output{font-family:var(--font-mono);font-variant-numeric:tabular-nums;text-align:right;font-weight:500}
-.bars-total{display:flex;justify-content:space-between;border-top:1px solid var(--rule);padding-top:12px;font-family:var(--font-mono);font-size:.8125rem;color:var(--ink-2)}
+.bar-row .mono{color:var(--dim);font-size:.6875rem;display:block}
+.bar{height:20px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),rgba(34,227,240,.55));transform-origin:left}
+.bar-row:nth-child(2) .bar i{background:linear-gradient(90deg,var(--magenta),rgba(255,46,147,.55))}
+.bars.in .bar i{animation:draw 1.2s cubic-bezier(.2,.7,.2,1) both}
+.bar-row output{font-family:var(--font-mono);font-variant-numeric:tabular-nums;text-align:right;font-weight:700}
+.total{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;font-family:var(--font-mono);font-size:.8125rem;color:var(--muted)}
 @media (max-width:440px){.bar-row{grid-template-columns:7rem minmax(0,1fr) 2rem}}
-.new-ctrls{display:flex;flex-wrap:wrap;gap:8px}
-.new-ctrls .chip b{color:var(--accent);font-weight:500;margin-right:6px}
-.iso-family{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.fam{border:1px solid var(--rule);border-radius:var(--radius);padding:16px;background:var(--surface);display:grid;gap:4px}
-.fam .mono{color:var(--accent);font-weight:500}
-.fam span{color:var(--ink-2);font-size:.875rem}
+.newc{display:flex;flex-wrap:wrap;gap:8px}
+.newc .chip b{color:var(--magenta);font-weight:700;margin-right:6px}
+.fam{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.fam{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.fam{grid-template-columns:1fr}}
+.fam div{border:1px solid var(--line);border-radius:8px;padding:16px;background:var(--panel);display:grid;gap:4px}
+.fam .mono{color:var(--cyan);font-size:.75rem}
+.fam span{color:var(--muted);font-size:.875rem}
 
-/* Scope table */
-.scope-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
-table{border-collapse:collapse;width:100%;min-width:720px;font-size:.9375rem}
-th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--rule);vertical-align:top}
-thead th{font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:500;background:var(--tint)}
+/* Scope */
+.scope-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:740px;font-size:.9375rem}
+th,td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--bg-2)}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:rgba(34,227,240,.04)}
 tbody tr:last-child td{border-bottom:0}
 td:first-child{font-weight:600}
-td .who{display:inline-block;font-family:var(--font-mono);font-size:.75rem;padding:3px 8px;border-radius:4px;background:var(--tint)}
-td .who.us{background:var(--pass-soft);color:var(--pass)}
+td:nth-child(2){color:var(--muted)}
+.who{display:inline-block;font-family:var(--font-mono);font-size:.75rem;padding:4px 9px;border-radius:3px;border:1px solid var(--line-2);color:var(--fg);white-space:nowrap}
+.who.us{border-color:rgba(43,217,154,.45);color:var(--pass);background:rgba(43,217,154,.08)}
 
 /* Industries */
-.ind{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 40px}
-@media (max-width:860px){.ind{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ind{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:880px){.ind{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.ind{grid-template-columns:1fr}}
-.ind div{border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:6px}
-.ind p{color:var(--ink-2);font-size:.9375rem}
+.ind div{border:1px solid var(--line);border-radius:10px;padding:22px;display:grid;gap:8px;background:linear-gradient(160deg,var(--panel),var(--bg-2));transition:border-color .2s}
+.ind div:hover{border-color:rgba(255,46,147,.45)}
+.ind .mono{font-size:.6875rem;color:var(--magenta);letter-spacing:.1em;text-transform:uppercase}
+.ind p{color:var(--muted);font-size:.9375rem}
 
-/* Engagement band */
-.dark{background:var(--band);color:var(--band-fg);border-top:0}
-.dark .lede,.dark p{color:var(--band-2)}
-.models{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-@media (max-width:860px){.models{grid-template-columns:1fr}}
-.model{border:1px solid color-mix(in srgb,var(--band-2) 35%,transparent);border-radius:10px;padding:26px;display:grid;gap:14px;align-content:start}
-.model h3{color:var(--band-fg);font-size:1.25rem}
-.model .mono{color:var(--accent)}
-.model ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.9375rem;color:var(--band-fg)}
-.model li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:8px}
-.model li::before{content:"";width:8px;height:1px;background:var(--accent);margin-top:.8em}
+/* Models */
+.models{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:880px){.models{grid-template-columns:1fr}}
+.model{position:relative;border:1px solid var(--line);border-radius:10px;padding:28px;display:grid;gap:14px;align-content:start;background:var(--panel);overflow:hidden}
+.model::before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,var(--cyan),var(--magenta))}
+.model .mono{color:var(--cyan);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+.model p{color:var(--muted)}
+.model ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.9375rem}
+.model li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px}
+.model li::before{content:"›";font-family:var(--font-mono);color:var(--magenta);font-weight:700}
 
 /* FAQ */
-.faq{display:grid;border-top:1px solid var(--rule);max-width:880px}
-.faq details{border-bottom:1px solid var(--rule)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-weight:600;font-size:var(--s1)}
+.faq{display:grid;border-top:1px solid var(--line);max-width:900px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:21px 0;font-family:var(--font-display);font-weight:600;font-size:1.15rem;transition:color .15s}
+.faq summary:hover{color:var(--cyan)}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-family:var(--font-mono);color:var(--accent);font-size:1.25rem;line-height:1}
-.faq details[open] summary::after{content:"–"}
-.faq details p{padding:0 0 22px;color:var(--ink-2);max-width:72ch}
+.faq summary::after{content:"+";font-family:var(--font-mono);color:var(--magenta);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:74ch}
 
 /* Contact */
-.contact{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,4vw,64px);align-items:start}
-@media (max-width:860px){.contact{grid-template-columns:1fr}}
-.contact-info{display:grid;gap:22px}
-.ci{display:grid;gap:4px;padding-top:14px;border-top:1px solid var(--rule)}
-.ci .mono{color:var(--ink-2);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase}
-.ci .val{font-size:var(--s1);font-weight:600;user-select:all;overflow-wrap:anywhere}
-form{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:clamp(20px,3vw,32px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.contact{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,4vw,64px);align-items:start}
+@media (max-width:880px){.contact{grid-template-columns:1fr}}
+.cinfo{display:grid;gap:20px}
+.ci{display:grid;gap:4px;padding-top:14px;border-top:1px solid var(--line)}
+.ci .mono{color:var(--dim);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase}
+.ci .val{font-size:1.1rem;font-weight:600;user-select:all;overflow-wrap:anywhere}
+form{background:var(--panel);border:1px solid var(--line-2);border-radius:10px;padding:clamp(20px,3vw,32px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;position:relative}
+form::before{content:"secure_enquiry.form";position:absolute;top:-11px;left:18px;font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.08em;color:var(--cyan);background:var(--bg);padding:2px 8px;border:1px solid var(--line-2);border-radius:3px}
 @media (max-width:560px){form{grid-template-columns:1fr}}
 .field{display:grid;gap:6px;min-width:0}
 .field.full{grid-column:1/-1}
-label{font-size:.8125rem;font-weight:600}
-input,select,textarea{font:inherit;font-size:.9375rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius);padding:11px 12px;width:100%}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
+label{font-family:var(--font-mono);font-size:.71875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:.9375rem;color:var(--fg);background:var(--bg-2);border:1px solid var(--line-2);border-radius:5px;padding:11px 12px;width:100%;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,227,240,.15)}
 textarea{min-height:110px;resize:vertical}
-.form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
-.form-foot small{color:var(--ink-2);font-size:.8125rem;max-width:44ch}
-.err{color:var(--gap);font-size:.8125rem}
-.composed{grid-column:1/-1;display:grid;gap:12px;border-top:1px solid var(--rule);padding-top:16px}
-.composed pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-family:var(--font-mono);font-size:.8125rem;background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius);padding:14px;max-height:260px;overflow:auto}
+.ffoot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.ffoot small{color:var(--muted);font-size:.8125rem;max-width:44ch}
+.err{grid-column:1/-1;color:var(--gap);font-size:.875rem}
+.composed{grid-column:1/-1;display:grid;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+.composed pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-family:var(--font-mono);font-size:.8125rem;background:var(--bg-2);border:1px solid var(--line);border-radius:5px;padding:14px;max-height:260px;overflow:auto;color:var(--fg)}
 .composed .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.ok-msg{color:var(--pass);font-weight:600;font-size:.9375rem}
+.ok-msg{color:var(--pass);font-weight:600}
 
 /* Footer */
-.site-foot{border-top:1px solid var(--rule);background:var(--tint)}
-.site-foot .wrap{padding-block:40px;display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,1fr));gap:28px}
-@media (max-width:820px){.site-foot .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:480px){.site-foot .wrap{grid-template-columns:1fr}}
-.site-foot h4{margin:0 0 10px;font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
-.site-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.9375rem}
-.site-foot a{text-decoration:none;color:var(--ink-2)}
-.site-foot a:hover{color:var(--ink)}
-.legal{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;display:grid;gap:8px;font-size:.8125rem;color:var(--ink-2)}
+.foot{border-top:1px solid var(--line);background:var(--bg-2)}
+.foot .wrap{padding-block:48px 36px;display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:32px}
+@media (max-width:860px){.foot .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.foot .wrap{grid-template-columns:1fr}}
+.foot .logo{width:150px;height:auto}
+.foot h4{margin:0 0 12px;font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);font-weight:500}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:.9375rem}
+.foot a{text-decoration:none;color:var(--muted)}
+.foot a:hover{color:var(--cyan)}
+.legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;display:grid;gap:8px;font-size:.8125rem;color:var(--dim)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
 </style>
 
 </head>
@@ -285,66 +331,80 @@ textarea{min-height:110px;resize:vertical}
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Vyash Cybersecurity home">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="29" rx="6" fill="none" stroke="var(--ink)" stroke-width="2.5"/><path d="M8 10.5l8 12 8-12" fill="none" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span><span class="brand-name">VYASH</span><span class="brand-sub">Cybersecurity Pvt. Ltd.</span></span>
+      <img class="mk" src="assets/vyash-mark.png" alt="" width="49" height="40">
+      <span class="wm"><img src="assets/vyash-wordmark.png" alt="Vyash" width="72" height="17"><span>Cybersecurity Pvt. Ltd.</span></span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">MENU</button>
     <nav class="nav" id="siteNav">
       <a href="#services">Services</a>
       <a href="#aadhaar">Aadhaar</a>
       <a href="#iso">ISO 27001</a>
       <a href="#scope">Scope</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="#contact">Book a scoping call</a>
+      <a class="btn btn-primary" href="#contact">Get assessed</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
 <section class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">Cyber security &amp; compliance · India</span>
-      <h1>Compliance you can <em>evidence.</em></h1>
-      <p class="lede">Vyash Cybersecurity prepares organisations for Aadhaar, ISO 27001, DPDP and regulator audits. We find the gaps, help you close them, test what you've built and hand over an evidence pack your auditor can verify.</p>
+      <span class="status"><i></i>Assessments open · Pan-India</span>
+      <h1><span class="row">Secure.</span><span class="row">Comply.</span><span class="row"><span class="glitch" data-text="Prove it.">Prove it.</span></span></h1>
+      <p class="lede">Vyash Cybersecurity tests your applications and networks, closes your compliance gaps, and hands you the evidence your auditors ask for. Aadhaar, ISO 27001, DPDP, RBI, SEBI and CERT-In, covered by one team.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#contact">Book a scoping call <span aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost" href="#finder">Find the right service</a>
+        <a class="btn btn-primary" href="#contact">Book a security assessment <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#finder">Find your service</a>
       </div>
-      <div class="hero-facts">
-        <span>Gap assessments</span><span>Implementation</span><span>VAPT &amp; testing</span><span>Audit readiness</span>
-      </div>
+      <div class="chips"><span class="chip">VAPT</span><span class="chip">Aadhaar compliance</span><span class="chip">ISO 27001</span><span class="chip">DPDP Act</span><span class="chip">vCISO</span></div>
     </div>
 
-    <aside class="register" aria-label="Example evidence register">
-      <div class="reg-top">
-        <span class="reg-title">Evidence register</span>
-        <span class="mono">Sample engagement</span>
-      </div>
-      <ul class="reg-rows" id="regRows"></ul>
-      <div class="reg-foot">
-        <div class="meter"><i id="regMeter" style="width:50%"></i></div>
-        <div class="mono"><span id="regCount">3 of 6 controls evidenced</span><span>Illustrative</span></div>
-      </div>
-    </aside>
+    <div class="term" aria-label="Sample assessment output">
+      <div class="term-bar"><b></b><b></b><b></b><span>vyash@assess:~</span><em>Sample run</em></div>
+<pre id="term"><span class="t-p">$</span> vyash assess --scope citizen-portal --frameworks aadhaar,iso27001,dpdp
+<span class="t-d">[*]</span> Enumerating assets ........ <span class="t-ok">14 hosts · 3 APIs</span>
+<span class="t-d">[*]</span> Aadhaar Data Vault ........ <span class="t-ok">[PASS]</span> keys held in HSM
+<span class="t-d">[*]</span> Aadhaar number masking .... <span class="t-g">[GAP]</span>  full number on receipt PDF
+<span class="t-d">[*]</span> TLS configuration ......... <span class="t-ok">[PASS]</span> TLS 1.2+ only
+<span class="t-d">[*]</span> A.8.28 Secure coding ...... <span class="t-w">[WARN]</span> 2 injection points in /api/v1
+<span class="t-d">[*]</span> CERT-In log retention ..... <span class="t-ok">[PASS]</span> 180 days, stored in India
+<span class="t-d">[*]</span> DPDP consent notice ....... <span class="t-g">[GAP]</span>  no withdrawal flow
+<span class="t-m">[✓]</span> Report ready · <span class="t-g">2 critical</span> · <span class="t-w">3 high</span> · 6 medium · evidence pack exported
+<span class="t-p">$</span> <span class="caret"></span></pre>
+    </div>
   </div>
 </section>
 
-<div class="strip" aria-label="Frameworks we work with">
-  <div class="wrap">
-    <span class="label">Frameworks</span>
-    <ul>
-      <li>Aadhaar Act &amp; UIDAI Regulations</li><li>ISO/IEC 27001:2022</li><li>DPDP Act 2023</li><li>CERT-In Directions 2022</li><li>RBI IT Governance</li><li>SEBI CSCRF</li><li>PCI DSS v4.0.1</li><li>SOC 2</li><li>OWASP</li><li>IEC 62443</li>
-    </ul>
+<div class="ticker" aria-label="Frameworks we work with">
+  <div class="track">
+    <ul><li>Aadhaar Act &amp; UIDAI Regulations</li><li>ISO/IEC 27001:2022</li><li>DPDP Act 2023</li><li>CERT-In Directions 2022</li><li>RBI IT Governance</li><li>SEBI CSCRF</li><li>PCI DSS v4.0.1</li><li>SOC 2</li><li>OWASP Top 10</li><li>IEC 62443</li><li>ISO 22301</li></ul>
+    <ul aria-hidden="true"><li>Aadhaar Act &amp; UIDAI Regulations</li><li>ISO/IEC 27001:2022</li><li>DPDP Act 2023</li><li>CERT-In Directions 2022</li><li>RBI IT Governance</li><li>SEBI CSCRF</li><li>PCI DSS v4.0.1</li><li>SOC 2</li><li>OWASP Top 10</li><li>IEC 62443</li><li>ISO 22301</li></ul>
   </div>
 </div>
 
-<section class="band" id="finder">
+<section class="sec">
   <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Start from what you need</span>
-      <h2>What are you trying to get done?</h2>
-      <p class="lede">Pick the situation closest to yours. You'll see how we'd usually approach it and what you'd receive.</p>
+    <div class="head reveal">
+      <span class="eyebrow">The numbers you're measured against</span>
+      <h2>Indian regulation is <span class="grad">specific</span>. So are we.</h2>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><span class="num" data-n="93">93</span><b>ISO 27001 controls</b><p>Annex A controls your Statement of Applicability must address.</p><span class="src">ISO/IEC 27001:2022</span></div>
+      <div class="stat"><span class="num" data-n="6">6<small>HRS</small></span><b>Incident reporting window</b><p>Time to report specified cyber incidents to CERT-In.</p><span class="src">CERT-In Directions, 2022</span></div>
+      <div class="stat"><span class="num" data-n="180">180<small>DAYS</small></span><b>Log retention</b><p>ICT system logs kept within Indian jurisdiction.</p><span class="src">CERT-In Directions, 2022</span></div>
+      <div class="stat"><span class="num" data-n="250">₹250<small>CR</small></span><b>Maximum penalty</b><p>For failing to take reasonable security safeguards.</p><span class="src">DPDP Act, 2023</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="finder">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Start from your situation</span>
+      <h2>What do you need to get done?</h2>
+      <p class="lede">Choose the situation closest to yours to see how we'd approach it and what you'd receive.</p>
     </div>
     <div class="finder">
       <div class="finder-opts" id="finderOpts" role="group" aria-label="Choose your situation"></div>
@@ -353,96 +413,104 @@ textarea{min-height:110px;resize:vertical}
   </div>
 </section>
 
-<section class="band" id="services">
+<section class="sec" id="services">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <span class="eyebrow">Services</span>
-      <h2>Full-cycle security and compliance</h2>
-      <p class="lede">From the first gap assessment to the day your certificate or audit report is issued, one team covers the policies, the technical controls and the testing.</p>
+      <h2>Offensive testing. Defensive compliance. <span class="grad">One team.</span></h2>
+      <p class="lede">We cover the policies, the technical controls and the testing, from the first gap assessment until your certificate or audit report is issued.</p>
     </div>
-    <div class="svc-grid">
-      <article class="svc">
-        <div class="svc-tag"><span class="eyebrow">Identity</span><span class="mono">UIDAI</span></div>
-        <h3>Aadhaar compliance support</h3>
-        <p>Readiness for AUA/KUA, Sub-AUA/Sub-KUA and ASA entities using Aadhaar authentication or e-KYC.</p>
-        <ul><li>Gap assessment against UIDAI compliance checklists</li><li>Aadhaar Data Vault and HSM architecture review</li><li>Consent, masking and log retention controls</li><li>Pre-audit evidence pack and remediation tracking</li></ul>
-      </article>
-      <article class="svc">
-        <div class="svc-tag"><span class="eyebrow">ISMS</span><span class="mono">ISO/IEC</span></div>
-        <h3>ISO 27001 and allied standards</h3>
-        <p>Design, implement and run an ISMS that passes certification and keeps working afterwards.</p>
-        <ul><li>ISO 27001:2022 implementation and internal audit</li><li>ISO 27701 privacy, ISO 22301 continuity</li><li>ISO 20000-1 service management</li><li>Stage 1 and Stage 2 audit support</li></ul>
-      </article>
-      <article class="svc">
-        <div class="svc-tag"><span class="eyebrow">Privacy</span><span class="mono">DPDP</span></div>
-        <h3>Data protection readiness</h3>
-        <p>Prepare for the Digital Personal Data Protection Act, 2023 and the phased obligations under the DPDP Rules.</p>
-        <ul><li>Personal data inventory and data-flow mapping</li><li>Consent notices and withdrawal flows</li><li>Breach response and Board notification process</li><li>Privacy impact assessments, DPO support</li></ul>
-      </article>
-      <article class="svc">
-        <div class="svc-tag"><span class="eyebrow">Regulatory</span><span class="mono">BFSI · Govt</span></div>
-        <h3>Regulatory compliance</h3>
-        <p>Readiness work for sector regulators and national directions that apply to your business.</p>
-        <ul><li>RBI IT Governance Master Direction</li><li>SEBI Cybersecurity and Cyber Resilience Framework</li><li>CERT-In Directions: 6-hour reporting, 180-day logs</li><li>PCI DSS and SOC 2 readiness</li></ul>
-      </article>
-      <article class="svc">
-        <div class="svc-tag"><span class="eyebrow">Testing</span><span class="mono">OWASP · PTES</span></div>
+    <div class="svc-grid" id="svcGrid">
+      <article class="svc reveal">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20.5 20.5 16 16M8.5 11h5M11 8.5v5"/></svg></span><span class="mono">OWASP · PTES</span></div>
         <h3>Vulnerability assessment &amp; penetration testing</h3>
         <p>Manual-first testing with findings you can reproduce, prioritise and fix.</p>
         <ul><li>Web, API and mobile application testing</li><li>Internal and external network testing</li><li>Cloud configuration review (AWS, Azure, GCP)</li><li>Secure code review and retesting</li></ul>
       </article>
-      <article class="svc">
-        <div class="svc-tag"><span class="eyebrow">Assurance</span><span class="mono">IS audit</span></div>
-        <h3>IS audits and risk assessments</h3>
-        <p>Independent review of your controls for management, boards and customers.</p>
-        <ul><li>IT general controls and IS audits</li><li>Third-party and vendor risk assessments</li><li>Risk assessment and treatment plans</li><li>Customer security questionnaire support</li></ul>
+      <article class="svc reveal">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v2"/><path d="M16 9V7a4 4 0 0 0-1.2-2.9"/><path d="M6 12a6 6 0 0 0 12 0"/><path d="M9 12a3 3 0 0 0 6 0M12 12v8"/></svg></span><span class="mono">UIDAI</span></div>
+        <h3>Aadhaar compliance support</h3>
+        <p>Readiness for AUA/KUA, Sub-AUA/Sub-KUA and ASA entities using Aadhaar authentication or e-KYC.</p>
+        <ul><li>Gap assessment against UIDAI checklists</li><li>Aadhaar Data Vault and HSM review</li><li>Consent, masking and log controls</li><li>Pre-audit evidence pack</li></ul>
       </article>
-      <article class="svc">
-        <div class="svc-tag"><span class="eyebrow">Advisory</span><span class="mono">vCISO</span></div>
-        <h3>Virtual CISO and governance</h3>
+      <article class="svc reveal">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><span class="mono">ISO/IEC</span></div>
+        <h3>ISO 27001 &amp; allied standards</h3>
+        <p>Design and run an ISMS that passes certification and keeps working afterwards.</p>
+        <ul><li>ISO 27001:2022 implementation</li><li>Internal audit and management review</li><li>ISO 27701, 22301, 20000-1</li><li>Stage 1 and Stage 2 audit support</li></ul>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v2"/></svg></span><span class="mono">DPDP</span></div>
+        <h3>Data protection readiness</h3>
+        <p>Prepare for the DPDP Act, 2023 and the phased obligations under the DPDP Rules.</p>
+        <ul><li>Personal data inventory and flow maps</li><li>Consent notices and withdrawal flows</li><li>Breach response and notification</li><li>Privacy impact assessments, DPO support</li></ul>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6"/></svg></span><span class="mono">BFSI · Govt</span></div>
+        <h3>Regulatory compliance</h3>
+        <p>Readiness work for the sector regulators and national directions that apply to you.</p>
+        <ul><li>RBI IT Governance Master Direction</li><li>SEBI CSCRF</li><li>CERT-In Directions readiness</li><li>PCI DSS and SOC 2 readiness</li></ul>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6l1 3h3v13H5V7h3l1-3Z"/><path d="M9 12h6M9 16h4"/></svg></span><span class="mono">IS audit</span></div>
+        <h3>IS audits &amp; risk assessments</h3>
+        <p>Independent reviews of your controls for management, boards and customers.</p>
+        <ul><li>IT general controls and IS audits</li><li>Third-party and vendor risk reviews</li><li>Risk assessment and treatment plans</li><li>Customer security questionnaires</li></ul>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-6 7-6s6.2 2.4 7 6"/></svg></span><span class="mono">vCISO</span></div>
+        <h3>Virtual CISO &amp; governance</h3>
         <p>Senior security leadership on a retainer, without a full-time hire.</p>
         <ul><li>Security strategy and roadmap</li><li>Policy and procedure library</li><li>Board and management reporting</li><li>Audit calendar and evidence management</li></ul>
       </article>
-      <article class="svc">
-        <div class="svc-tag"><span class="eyebrow">Resilience</span><span class="mono">IR · BCP</span></div>
+      <article class="svc reveal">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 4 14h7l-1 7 9-11h-7l1-7Z"/></svg></span><span class="mono">IR · BCP</span></div>
         <h3>Incident readiness</h3>
-        <p>Be ready to detect, respond and report within the timelines regulators expect.</p>
-        <ul><li>Incident response plans and playbooks</li><li>Tabletop exercises for leadership</li><li>Log management and SOC readiness review</li><li>Business continuity and DR testing</li></ul>
+        <p>Detect, respond and report within the timelines regulators expect.</p>
+        <ul><li>Incident response plans and playbooks</li><li>Tabletop exercises for leadership</li><li>Log management and SOC readiness</li><li>Business continuity and DR testing</li></ul>
       </article>
-      <article class="svc">
-        <div class="svc-tag"><span class="eyebrow">People &amp; OT</span><span class="mono">IEC 62443</span></div>
-        <h3>Awareness and OT security</h3>
+      <article class="svc reveal">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 12l3-3 2 2 4-4"/></svg></span><span class="mono">IEC 62443</span></div>
+        <h3>Awareness &amp; OT security</h3>
         <p>Train the people who use your systems and assess the plants that run on them.</p>
-        <ul><li>Security awareness training and phishing simulation</li><li>Developer secure-coding workshops</li><li>OT/ICS security assessment to IEC 62443</li><li>Network segmentation and patch planning</li></ul>
+        <ul><li>Awareness training and phishing simulation</li><li>Secure-coding workshops for developers</li><li>OT/ICS assessment to IEC 62443</li><li>Segmentation and patch planning</li></ul>
       </article>
     </div>
   </div>
 </section>
 
-<section class="band" id="aadhaar">
+<section class="sec" id="aadhaar">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <span class="eyebrow">Aadhaar compliance support</span>
-      <h2>Get your Aadhaar integration audit-ready</h2>
-      <p class="lede">Entities that authenticate residents through Aadhaar carry obligations under the Aadhaar Act, 2016 and UIDAI's authentication regulations. We help you meet them in your architecture, your processes and your paperwork.</p>
+      <h2>Every hop of an Aadhaar transaction, <span class="grad">secured.</span></h2>
+      <p class="lede">Entities that authenticate residents through Aadhaar carry obligations under the Aadhaar Act, 2016 and UIDAI's authentication regulations. We check each point where Aadhaar data moves or rests.</p>
+    </div>
+    <div class="flow reveal" aria-label="Aadhaar authentication flow">
+      <span class="pkt" aria-hidden="true"></span>
+      <div class="hop"><span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-6 7-6s6.2 2.4 7 6"/></svg></span><b>Resident</b><span>Informed consent in their language</span><span class="tag">Consent logged</span></div>
+      <div class="hop"><span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 17h4"/></svg></span><b>Registered device</b><span>Biometric captured and encrypted at source</span><span class="tag">PID encrypted</span></div>
+      <div class="hop"><span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3"/></svg></span><b>Your application</b><span>Masked display, no core biometrics stored</span><span class="tag">Masked · ADV ref key</span></div>
+      <div class="hop"><span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r=".6"/><circle cx="8" cy="12" r=".6"/><circle cx="8" cy="17" r=".6"/></svg></span><b>AUA / ASA</b><span>Secure, signed requests over leased or encrypted links</span><span class="tag">Signed · logged</span></div>
+      <div class="hop"><span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6l-8-3Z"/></svg></span><b>UIDAI CIDR</b><span>Yes/No or e-KYC response returned</span><span class="tag">Response verified</span></div>
     </div>
     <div class="split">
-      <div class="entities">
-        <div class="entity"><span class="mono">AUA / KUA</span><p><b>Authentication and e-KYC user agencies</b>Direct agreement with UIDAI. We review your end-to-end flow, key management and the controls UIDAI checks at annual audit.</p></div>
-        <div class="entity"><span class="mono">Sub-AUA / Sub-KUA</span><p><b>Departments and businesses authenticating through an AUA</b>Common for state schemes and welfare portals. We prepare the compliance checklist, evidence and application-level controls your AUA asks for.</p></div>
-        <div class="entity"><span class="mono">ASA</span><p><b>Authentication service agencies</b>Network and infrastructure providers connecting AUAs to the CIDR. We review connectivity, encryption and operational security.</p></div>
-        <div class="entity"><span class="mono">Applications</span><p><b>Portals and apps that collect or display Aadhaar</b>We test the application itself for data exposure, insecure storage and broken masking.</p></div>
+      <div class="entities reveal">
+        <div class="entity"><span class="mono">AUA / KUA</span><p><b>Authentication and e-KYC user agencies</b>Direct agreement with UIDAI. We review the end-to-end flow, key management and the controls checked at annual audit.</p></div>
+        <div class="entity"><span class="mono">Sub-AUA / KUA</span><p><b>Departments and businesses authenticating through an AUA</b>Common for state schemes and welfare portals. We prepare the checklist, evidence and application-level controls your AUA asks for.</p></div>
+        <div class="entity"><span class="mono">ASA</span><p><b>Authentication service agencies</b>We review connectivity, encryption and operational security between AUAs and the CIDR.</p></div>
+        <div class="entity"><span class="mono">Applications</span><p><b>Portals and apps that collect or display Aadhaar</b>We test for exposed Aadhaar numbers, insecure storage and broken masking.</p></div>
       </div>
-      <div class="checklist">
+      <div class="check reveal">
         <h3>Controls we help you put in place</h3>
         <ul>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aadhaar Data Vault<small>Aadhaar numbers stored only in the vault, referenced elsewhere by a reference key</small></span></li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>HSM-backed key management<small>Encryption keys generated and held in a hardware security module</small></span></li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Informed consent<small>Consent captured in the resident's language and recorded before every authentication</small></span></li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Masking and minimal display<small>Only the last four digits shown on screens, reports and printouts</small></span></li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Registered biometric devices<small>Device certification, PID block encryption and no storage of core biometrics</small></span></li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Authentication logs<small>Transaction logs kept for the periods the regulations specify, without PID data</small></span></li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Grievance redressal and VID support<small>Resident-facing processes and Virtual ID acceptance</small></span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aadhaar Data Vault<small>Numbers stored only in the vault, referenced elsewhere by a reference key</small></span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>HSM-backed key management<small>Keys generated and held in a hardware security module</small></span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Informed consent<small>Recorded before every authentication</small></span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Masking and minimal display<small>Only the last four digits on screens, reports and printouts</small></span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Registered biometric devices<small>Certified devices, encrypted PID blocks, no core biometric storage</small></span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Authentication logs<small>Kept for the periods the regulations specify, without PID data</small></span></li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Grievance redressal and VID support<small>Resident-facing processes and Virtual ID acceptance</small></span></li>
         </ul>
       </div>
     </div>
@@ -450,106 +518,106 @@ textarea{min-height:110px;resize:vertical}
   </div>
 </section>
 
-<section class="band" id="iso">
+<section class="sec" id="iso">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <span class="eyebrow">ISO/IEC 27001:2022</span>
-      <h2>From scoping to certificate</h2>
+      <h2>From scoping to <span class="grad">certificate.</span></h2>
       <p class="lede">Every ISO 27001 programme follows the same order. We run each stage with you and leave behind an ISMS your team can operate.</p>
     </div>
-    <ol class="roadmap">
-      <li><b>Scope &amp; context</b><span>Define the ISMS boundary, interested parties and objectives.</span><span class="mono">Clauses 4–5</span></li>
-      <li><b>Gap assessment</b><span>Measure current practice against every clause and Annex A control.</span><span class="mono">Clauses 4–10</span></li>
+    <ol class="road" id="road">
+      <li><b>Scope &amp; context</b><span>ISMS boundary, interested parties and objectives.</span><span class="mono">Clauses 4–5</span></li>
+      <li><b>Gap assessment</b><span>Current practice against every clause and Annex A control.</span><span class="mono">Clauses 4–10</span></li>
       <li><b>Risk &amp; SoA</b><span>Risk assessment, treatment plan and Statement of Applicability.</span><span class="mono">Clause 6.1</span></li>
       <li><b>Implement</b><span>Policies, procedures and technical controls, with evidence as you go.</span><span class="mono">Clauses 7–8</span></li>
       <li><b>Internal audit</b><span>Independent internal audit and management review.</span><span class="mono">Clause 9</span></li>
       <li><b>Certification</b><span>Support through Stage 1 and Stage 2 audits by an accredited body.</span><span class="mono">Clause 10</span></li>
     </ol>
     <div class="annex">
-      <div class="bars" aria-label="Annex A controls by theme">
+      <div class="panel bars" id="bars">
         <h3>93 Annex A controls in four themes</h3>
         <div class="bar-row"><span>Organisational<span class="mono">A.5.1 – A.5.37</span></span><div class="bar"><i style="width:100%"></i></div><output>37</output></div>
         <div class="bar-row"><span>Technological<span class="mono">A.8.1 – A.8.34</span></span><div class="bar"><i style="width:91.9%"></i></div><output>34</output></div>
         <div class="bar-row"><span>Physical<span class="mono">A.7.1 – A.7.14</span></span><div class="bar"><i style="width:37.8%"></i></div><output>14</output></div>
         <div class="bar-row"><span>People<span class="mono">A.6.1 – A.6.8</span></span><div class="bar"><i style="width:21.6%"></i></div><output>8</output></div>
-        <div class="bars-total"><span>Total</span><span>93</span></div>
+        <div class="total"><span>Total</span><span>93</span></div>
       </div>
-      <div style="display:grid;gap:16px;min-width:0">
+      <div class="panel">
         <h3>Controls introduced in the 2022 revision</h3>
-        <p class="lede" style="font-size:.9375rem">Organisations moving from the 2013 version often have the most work in these eleven. We map them to what you already do before writing anything new.</p>
-        <div class="new-ctrls">
-          <span class="chip"><b>5.7</b>Threat intelligence</span><span class="chip"><b>5.23</b>Cloud services</span><span class="chip"><b>5.30</b>ICT readiness for continuity</span><span class="chip"><b>7.4</b>Physical security monitoring</span><span class="chip"><b>8.9</b>Configuration management</span><span class="chip"><b>8.10</b>Information deletion</span><span class="chip"><b>8.11</b>Data masking</span><span class="chip"><b>8.12</b>Data leakage prevention</span><span class="chip"><b>8.16</b>Monitoring activities</span><span class="chip"><b>8.23</b>Web filtering</span><span class="chip"><b>8.28</b>Secure coding</span>
+        <p style="color:var(--muted);font-size:.9375rem">Teams moving from the 2013 version usually have the most work in these eleven. We map them to what you already do before writing anything new.</p>
+        <div class="newc">
+          <span class="chip"><b>5.7</b>Threat intelligence</span><span class="chip"><b>5.23</b>Cloud services</span><span class="chip"><b>5.30</b>ICT readiness</span><span class="chip"><b>7.4</b>Physical monitoring</span><span class="chip"><b>8.9</b>Configuration mgmt</span><span class="chip"><b>8.10</b>Information deletion</span><span class="chip"><b>8.11</b>Data masking</span><span class="chip"><b>8.12</b>Data leakage prevention</span><span class="chip"><b>8.16</b>Monitoring activities</span><span class="chip"><b>8.23</b>Web filtering</span><span class="chip"><b>8.28</b>Secure coding</span>
         </div>
       </div>
     </div>
-    <div class="iso-family">
-      <div class="fam"><span class="mono">ISO/IEC 27701</span><b>Privacy information management</b><span>Extends your ISMS to personal data. Pairs well with DPDP work.</span></div>
-      <div class="fam"><span class="mono">ISO 22301</span><b>Business continuity</b><span>BIA, continuity strategies and exercised recovery plans.</span></div>
-      <div class="fam"><span class="mono">ISO/IEC 20000-1</span><b>IT service management</b><span>Service management system for IT and managed service providers.</span></div>
-      <div class="fam"><span class="mono">ISO/IEC 27017 / 27018</span><b>Cloud security and privacy</b><span>Additional controls for cloud providers and cloud customers.</span></div>
+    <div class="fam">
+      <div><span class="mono">ISO/IEC 27701</span><b>Privacy information management</b><span>Extends your ISMS to personal data. Pairs well with DPDP work.</span></div>
+      <div><span class="mono">ISO 22301</span><b>Business continuity</b><span>BIA, continuity strategies and exercised recovery plans.</span></div>
+      <div><span class="mono">ISO/IEC 20000-1</span><b>IT service management</b><span>For IT and managed service providers.</span></div>
+      <div><span class="mono">ISO/IEC 27017 / 27018</span><b>Cloud security &amp; privacy</b><span>Controls for cloud providers and customers.</span></div>
     </div>
   </div>
 </section>
 
-<section class="band" id="scope">
+<section class="sec" id="scope">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <span class="eyebrow">Clear scope</span>
       <h2>Who does what in a formal audit</h2>
-      <p class="lede">Several certificates and audit reports can only be issued by a specific kind of body. We tell you upfront where our work ends, so there are no surprises at sign-off.</p>
+      <p class="lede">Some certificates and audit reports can only be issued by a specific kind of body. We tell you upfront where our work ends, so there are no surprises at sign-off.</p>
     </div>
-    <div class="scope-wrap" tabindex="0" aria-label="Scope table, scrolls sideways on small screens">
+    <div class="scope-wrap reveal" tabindex="0" aria-label="Scope table, scrolls sideways on small screens">
       <table>
         <thead><tr><th>Outcome you need</th><th>What Vyash delivers</th><th>Who issues the final outcome</th></tr></thead>
         <tbody>
+          <tr><td>Private-sector VAPT report</td><td>Full testing, report and retest</td><td><span class="who us">Vyash</span></td></tr>
+          <tr><td>Internal IS audit, risk assessment, vendor review</td><td>Full engagement and report</td><td><span class="who us">Vyash</span></td></tr>
+          <tr><td>DPDP readiness assessment</td><td>Full engagement and roadmap</td><td><span class="who us">Vyash</span></td></tr>
           <tr><td>ISO 27001 certificate</td><td>Implementation, risk assessment, SoA, internal audit, Stage 1 and 2 support</td><td><span class="who">Accredited certification body</span></td></tr>
           <tr><td>UIDAI annual audit (AUA/KUA/ASA)</td><td>Gap assessment, ADV/HSM review, remediation, evidence pack</td><td><span class="who">Auditor meeting UIDAI criteria</span></td></tr>
           <tr><td>Government website or app security audit</td><td>Pre-audit VAPT, remediation guidance, retesting</td><td><span class="who">CERT-In empanelled auditor</span></td></tr>
           <tr><td>SOC 2 report</td><td>Readiness assessment, control design, evidence collection</td><td><span class="who">Licensed CPA firm</span></td></tr>
           <tr><td>PCI DSS Report on Compliance</td><td>Gap assessment, scope reduction, remediation</td><td><span class="who">PCI Qualified Security Assessor</span></td></tr>
-          <tr><td>Private-sector VAPT report</td><td>Full testing, report and retest</td><td><span class="who us">Vyash</span></td></tr>
-          <tr><td>Internal IS audit, risk assessment, vendor review</td><td>Full engagement and report</td><td><span class="who us">Vyash</span></td></tr>
-          <tr><td>DPDP readiness assessment</td><td>Full engagement and roadmap</td><td><span class="who us">Vyash</span></td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<section class="band" id="industries">
+<section class="sec" id="industries">
   <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Who we work with</span>
+    <div class="head reveal">
+      <span class="eyebrow">Who we protect</span>
       <h2>Sectors we support</h2>
     </div>
     <div class="ind">
-      <div><h3>Government departments &amp; PSUs</h3><p>Welfare portals, Aadhaar-enabled schemes, e-procurement and citizen services.</p></div>
-      <div><h3>Banks, NBFCs &amp; fintech</h3><p>RBI and SEBI readiness, payment security and customer data protection.</p></div>
-      <div><h3>Healthcare &amp; pharma</h3><p>Patient data, hospital systems and research environments.</p></div>
-      <div><h3>Universities &amp; institutes</h3><p>Student data, ERP systems and campus networks.</p></div>
-      <div><h3>SaaS &amp; IT services</h3><p>ISO 27001 and SOC 2 for winning enterprise customers.</p></div>
-      <div><h3>Energy &amp; manufacturing</h3><p>OT and ICS assessments, segmentation and patch programmes.</p></div>
+      <div class="reveal"><span class="mono">Public sector</span><h3>Government departments &amp; PSUs</h3><p>Welfare portals, Aadhaar-enabled schemes, e-procurement and citizen services.</p></div>
+      <div class="reveal"><span class="mono">BFSI</span><h3>Banks, NBFCs &amp; fintech</h3><p>RBI and SEBI readiness, payment security and customer data protection.</p></div>
+      <div class="reveal"><span class="mono">Health</span><h3>Healthcare &amp; pharma</h3><p>Patient data, hospital systems and research environments.</p></div>
+      <div class="reveal"><span class="mono">Education</span><h3>Universities &amp; institutes</h3><p>Student data, ERP systems and campus networks.</p></div>
+      <div class="reveal"><span class="mono">Technology</span><h3>SaaS &amp; IT services</h3><p>ISO 27001 and SOC 2 for winning enterprise customers.</p></div>
+      <div class="reveal"><span class="mono">Industrial</span><h3>Energy &amp; manufacturing</h3><p>OT and ICS assessments, segmentation and patch programmes.</p></div>
     </div>
   </div>
 </section>
 
-<section class="band dark" id="engage">
+<section class="sec" id="engage">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <span class="eyebrow">How we engage</span>
       <h2>Three ways to work with us</h2>
     </div>
     <div class="models">
-      <div class="model"><span class="mono">Fixed scope</span><h3>Assessment</h3><p>A defined piece of work with a fixed fee and a clear report at the end.</p><ul><li>Gap assessment or VAPT</li><li>Prioritised findings</li><li>One round of retesting</li></ul></div>
-      <div class="model"><span class="mono">Programme</span><h3>Implementation</h3><p>We work alongside your team until the certificate or audit is through.</p><ul><li>Weekly progress tracking</li><li>Policies and controls built with you</li><li>Audit-day support</li></ul></div>
-      <div class="model"><span class="mono">Retainer</span><h3>Ongoing compliance</h3><p>Continuous support so you stay compliant between audits.</p><ul><li>Virtual CISO hours</li><li>Quarterly testing and reviews</li><li>Surveillance audit preparation</li></ul></div>
+      <div class="model reveal"><span class="mono">Fixed scope</span><h3>Assessment</h3><p>A defined piece of work with a fixed fee and a clear report at the end.</p><ul><li>Gap assessment or VAPT</li><li>Prioritised findings</li><li>One round of retesting</li></ul></div>
+      <div class="model reveal"><span class="mono">Programme</span><h3>Implementation</h3><p>We work alongside your team until the certificate or audit is through.</p><ul><li>Weekly progress tracking</li><li>Policies and controls built with you</li><li>Audit-day support</li></ul></div>
+      <div class="model reveal"><span class="mono">Retainer</span><h3>Ongoing compliance</h3><p>Continuous support so you stay compliant between audits.</p><ul><li>Virtual CISO hours</li><li>Quarterly testing and reviews</li><li>Surveillance audit preparation</li></ul></div>
     </div>
   </div>
 </section>
 
-<section class="band" id="faq">
+<section class="sec" id="faq">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <span class="eyebrow">Questions</span>
       <h2>Frequently asked</h2>
     </div>
@@ -564,13 +632,13 @@ textarea{min-height:110px;resize:vertical}
   </div>
 </section>
 
-<section class="band" id="contact">
+<section class="sec" id="contact">
   <div class="wrap">
     <div class="contact">
-      <div class="contact-info">
+      <div class="cinfo reveal">
         <div class="head">
           <span class="eyebrow">Contact</span>
-          <h2>Tell us what you need to pass</h2>
+          <h2>Tell us what you need to <span class="grad">pass.</span></h2>
           <p class="lede">Share your situation and we'll come back with a scope, approach and timeline.</p>
         </div>
         <div class="ci"><span class="mono">Email</span><span class="val" id="ciEmail">contact@vyashcyber.in</span></div>
@@ -579,16 +647,16 @@ textarea{min-height:110px;resize:vertical}
         <div class="ci"><span class="mono">Hours</span><span class="val">Mon – Sat, 10:00 – 18:30 IST</span></div>
       </div>
       <form id="enquiry" novalidate>
-        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" value=""></div>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name"></div>
         <div class="field"><label for="f-org">Organisation</label><input id="f-org" name="org" autocomplete="organization"></div>
         <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
         <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
         <div class="field full"><label for="f-need">What do you need help with?</label>
           <select id="f-need" name="need">
-            <option>Aadhaar compliance support</option><option>ISO 27001 implementation</option><option>DPDP readiness</option><option>RBI / SEBI / regulatory compliance</option><option>VAPT / security testing</option><option>IS audit or risk assessment</option><option>Virtual CISO / ongoing support</option><option>Something else</option>
+            <option>VAPT / security testing</option><option>Aadhaar compliance support</option><option>ISO 27001 implementation</option><option>DPDP readiness</option><option>RBI / SEBI / regulatory compliance</option><option>IS audit or risk assessment</option><option>Virtual CISO / ongoing support</option><option>Something else</option>
           </select></div>
         <div class="field full"><label for="f-msg">Details</label><textarea id="f-msg" name="msg" placeholder="Systems in scope, deadlines, who is asking for the audit"></textarea></div>
-        <div class="form-foot">
+        <div class="ffoot">
           <small>We use these details only to reply to your enquiry.</small>
           <button class="btn btn-primary" type="submit">Prepare enquiry</button>
         </div>
@@ -596,7 +664,7 @@ textarea{min-height:110px;resize:vertical}
         <div class="composed" id="composed" hidden>
           <span class="ok-msg">Your enquiry is ready. Copy it and send it to <span id="sendTo"></span>.</span>
           <pre id="composedText"></pre>
-          <div class="row"><button class="btn btn-ghost" type="button" id="copyBtn">Copy enquiry</button><span class="mono" id="copyState" aria-live="polite"></span></div>
+          <div class="row"><button class="btn btn-ghost" type="button" id="copyBtn">Copy enquiry</button><span class="mono" id="copyState" aria-live="polite" style="font-size:.8125rem;color:var(--muted)"></span></div>
         </div>
       </form>
     </div>
@@ -604,14 +672,14 @@ textarea{min-height:110px;resize:vertical}
 </section>
 </main>
 
-<footer class="site-foot">
+<footer class="foot">
   <div class="wrap">
-    <div style="display:grid;gap:12px">
-      <span class="brand"><svg viewBox="0 0 32 32" aria-hidden="true" style="width:28px;height:28px"><rect x="1.5" y="1.5" width="29" height="29" rx="6" fill="none" stroke="var(--ink)" stroke-width="2.5"/><path d="M8 10.5l8 12 8-12" fill="none" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-name">VYASH</span></span>
-      <p style="color:var(--ink-2);font-size:.9375rem;max-width:36ch">Cyber security and compliance support for Indian organisations.</p>
+    <div style="display:grid;gap:14px;align-content:start">
+      <img class="logo" src="assets/vyash-logo.png" alt="Vyash" width="150" height="158">
+      <p style="color:var(--muted);font-size:.9375rem;max-width:36ch">Cyber security testing and compliance support for Indian organisations.</p>
     </div>
-    <div><h4>Compliance</h4><ul><li><a href="#aadhaar">Aadhaar support</a></li><li><a href="#iso">ISO 27001</a></li><li><a href="#services">DPDP readiness</a></li><li><a href="#services">RBI &amp; SEBI</a></li></ul></div>
     <div><h4>Security</h4><ul><li><a href="#services">VAPT</a></li><li><a href="#services">Cloud review</a></li><li><a href="#services">IS audits</a></li><li><a href="#services">Incident readiness</a></li></ul></div>
+    <div><h4>Compliance</h4><ul><li><a href="#aadhaar">Aadhaar support</a></li><li><a href="#iso">ISO 27001</a></li><li><a href="#services">DPDP readiness</a></li><li><a href="#services">RBI &amp; SEBI</a></li></ul></div>
     <div><h4>Company</h4><ul><li><a href="#engage">How we engage</a></li><li><a href="#scope">Scope of work</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
     <div class="legal">
       <span>© <span id="yr">2026</span> Vyash Cybersecurity Private Limited. All rights reserved.</span>
@@ -622,88 +690,128 @@ textarea{min-height:110px;resize:vertical}
 
 <script>
 (function(){
-  // Mobile nav
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mq=window.matchMedia('(max-width:940px)');
+
+  /* Mobile nav */
   var t=document.getElementById('navToggle'),n=document.getElementById('siteNav');
-  function setNav(open){t.setAttribute('aria-expanded',open);if(window.matchMedia('(max-width:900px)').matches){n.hidden=!open}else{n.hidden=false}}
+  function setNav(open){t.setAttribute('aria-expanded',open);t.textContent=open?'CLOSE':'MENU';n.hidden=mq.matches?!open:false}
   setNav(false);
   t.addEventListener('click',function(){setNav(t.getAttribute('aria-expanded')!=='true')});
-  n.addEventListener('click',function(e){if(e.target.tagName==='A'&&window.matchMedia('(max-width:900px)').matches)setNav(false)});
-  window.addEventListener('resize',function(){if(!window.matchMedia('(max-width:900px)').matches){n.hidden=false}else if(t.getAttribute('aria-expanded')!=='true'){n.hidden=true}});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A'&&mq.matches)setNav(false)});
+  window.addEventListener('resize',function(){if(!mq.matches)n.hidden=false;else if(t.getAttribute('aria-expanded')!=='true')n.hidden=true});
 
-  // Evidence register
-  var rows=[
-    {id:'A.5.15',name:'Access control',src:'ISO 27001:2022',s:2},
-    {id:'ADV-KEY',name:'Vault keys held in HSM',src:'Aadhaar Data Vault',s:2},
-    {id:'A.8.11',name:'Data masking',src:'ISO 27001:2022',s:1},
-    {id:'DPDP 8(5)',name:'Reasonable security safeguards',src:'DPDP Act, 2023',s:0},
-    {id:'CERT-In',name:'180-day log retention in India',src:'CERT-In Directions, 2022',s:2},
-    {id:'A.8.28',name:'Secure coding',src:'ISO 27001:2022',s:1}
-  ];
-  var labels=['Gap','In progress','Evidenced'],cls=['gap','prog','ok'];
-  var ul=document.getElementById('regRows'),meter=document.getElementById('regMeter'),count=document.getElementById('regCount');
-  function draw(){
-    ul.innerHTML=rows.map(function(r){return '<li class="reg-row"><span class="reg-id">'+r.id+'</span><span class="reg-name">'+r.name+'<small>'+r.src+'</small></span><span class="pill '+cls[r.s]+'">'+labels[r.s]+'</span></li>'}).join('');
-    var ok=rows.filter(function(r){return r.s===2}).length;
-    meter.style.width=(ok/rows.length*100)+'%';
-    count.textContent=ok+' of '+rows.length+' controls evidenced';
+  /* Network canvas */
+  var cv=document.getElementById('net'),ctx=cv.getContext('2d'),hero=cv.parentElement;
+  var W=0,H=0,dpr=1,nodes=[],packets=[],flashes=[],running=false,raf=0;
+  function size(){
+    dpr=Math.min(window.devicePixelRatio||1,2);W=hero.clientWidth;H=hero.clientHeight;
+    cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+    var count=Math.max(28,Math.min(90,Math.round(W*H/16000)));
+    nodes=[];for(var i=0;i<count;i++)nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.6+.8});
+    packets=[];
   }
-  draw();
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var LINK=150;
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<nodes.length;i++){var a=nodes[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1}
+    ctx.lineWidth=1;
+    for(i=0;i<nodes.length;i++){for(var j=i+1;j<nodes.length;j++){var a=nodes[i],b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<LINK){ctx.strokeStyle='rgba(34,227,240,'+(0.16*(1-d/LINK)).toFixed(3)+')';ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+        if(!reduce&&packets.length<14&&Math.random()<0.0009)packets.push({a:a,b:b,t:0,s:.008+Math.random()*.01,bad:Math.random()<.22})}}}
+    for(i=0;i<nodes.length;i++){var p=nodes[i];ctx.fillStyle='rgba(180,240,250,.75)';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill()}
+    for(i=packets.length-1;i>=0;i--){var k=packets[i];k.t+=k.s;
+      if(k.t>=1){if(k.bad)flashes.push({x:k.b.x,y:k.b.y,r:2,o:1});packets.splice(i,1);continue}
+      var x=k.a.x+(k.b.x-k.a.x)*k.t,y=k.a.y+(k.b.y-k.a.y)*k.t,c=k.bad?'255,46,147':'34,227,240';
+      ctx.fillStyle='rgba('+c+',1)';ctx.shadowColor='rgba('+c+',1)';ctx.shadowBlur=12;ctx.beginPath();ctx.arc(x,y,2.2,0,6.283);ctx.fill();ctx.shadowBlur=0}
+    for(i=flashes.length-1;i>=0;i--){var f=flashes[i];f.r+=1.1;f.o-=.025;if(f.o<=0){flashes.splice(i,1);continue}
+      ctx.strokeStyle='rgba(255,46,147,'+f.o.toFixed(3)+')';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(f.x,f.y,f.r,0,6.283);ctx.stroke();
+      ctx.strokeStyle='rgba(255,46,147,'+(f.o*.6).toFixed(3)+')';ctx.beginPath();ctx.moveTo(f.x-4,f.y-4);ctx.lineTo(f.x+4,f.y+4);ctx.moveTo(f.x+4,f.y-4);ctx.lineTo(f.x-4,f.y+4);ctx.stroke()}
+    if(running)raf=requestAnimationFrame(frame);
+  }
+  size();frame();
+  window.addEventListener('resize',function(){size();if(!running)frame()});
+  if(!reduce&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){var v=es[0].isIntersecting;if(v&&!running){running=true;raf=requestAnimationFrame(frame)}else if(!v){running=false;cancelAnimationFrame(raf)}}).observe(hero);
+  }
+
+  /* Terminal typing loop: starts from the complete sample output */
+  var term=document.getElementById('term');
   if(!reduce){
-    setInterval(function(){
-      var open=rows.filter(function(r){return r.s<2});
-      if(!open.length){rows.forEach(function(r,i){r.s=[2,2,1,0,2,1][i]})}
-      else{open[0].s++}
-      draw();
-    },2200);
+    var full=term.innerHTML;
+    var lines=full.split('\n');
+    var idx=0;
+    function typeNext(){
+      if(idx===0)term.innerHTML='';
+      if(idx<lines.length-1){
+        var html=lines.slice(0,idx+1).join('\n');
+        term.innerHTML=html+'\n<span class="caret"></span>';
+        idx++;
+        setTimeout(typeNext,idx===1?900:520+Math.random()*420);
+      } else {term.innerHTML=full;idx=0;setTimeout(typeNext,6500)}
+    }
+    setTimeout(typeNext,5000);
   }
 
-  // Path finder
+  /* Scroll reveal and drawn elements */
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal,#road,#bars').forEach(function(el){
+      var r=el.getBoundingClientRect();if(r.top<window.innerHeight)return;io.observe(el)});
+  }
+
+  /* Stat number scramble when scrolled into view */
+  if('IntersectionObserver' in window&&!reduce){
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;so.unobserve(e.target);
+      var el=e.target,target=+el.dataset.n,suffix=el.querySelector('small'),pre=el.textContent.trim().charAt(0)==='₹'?'₹':'',st=null;
+      var sfx=suffix?suffix.outerHTML:'';
+      function step(ts){if(!st)st=ts;var p=Math.min(1,(ts-st)/1100),v=Math.round(target*(1-Math.pow(1-p,3)));el.innerHTML=pre+v+sfx;if(p<1)requestAnimationFrame(step)}
+      requestAnimationFrame(step)})},{threshold:.6});
+    document.querySelectorAll('.num[data-n]').forEach(function(el){if(el.getBoundingClientRect().top>window.innerHeight)so.observe(el)});
+  }
+
+  /* Card spotlight */
+  document.getElementById('svcGrid').addEventListener('pointermove',function(e){var c=e.target.closest('.svc');if(!c)return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')});
+
+  /* Path finder */
   var paths=[
-    {k:'aadhaar',t:'Going live with Aadhaar authentication',tag:'UIDAI',
-     h:'Aadhaar integration readiness',
-     steps:[['Map the flow','Trace Aadhaar data from capture to storage, display and logs.'],['Review the architecture','Data Vault, HSM key handling, PID encryption and device certification.'],['Test the application','Look for exposed Aadhaar numbers, weak masking and insecure APIs.'],['Build the evidence pack','Checklist, policies and screenshots ready for your AUA or auditor.']],
-     d:['Gap report','ADV/HSM review note','VAPT report','Compliance checklist','Evidence pack']},
-    {k:'iso',t:'Getting ISO 27001 certified',tag:'ISO/IEC',
-     h:'ISO 27001 implementation',
-     steps:[['Agree the scope','Set the ISMS boundary around what your customers care about.'],['Assess the gaps','Clause-by-clause and control-by-control against ISO 27001:2022.'],['Implement','Risk assessment, Statement of Applicability, policies and controls.'],['Audit and certify','Internal audit, management review, then Stage 1 and Stage 2 support.']],
-     d:['Gap report','Risk register','Statement of Applicability','Policy set','Internal audit report']},
-    {k:'reg',t:'Preparing for an RBI or SEBI inspection',tag:'BFSI',
-     h:'Regulatory readiness review',
-     steps:[['Identify obligations','List the directions and circulars that apply to your entity type.'],['Assess compliance','Test controls and documents against each requirement.'],['Close the gaps','Prioritised remediation plan with owners and dates.'],['Prepare for inspection','Board-ready summary and organised evidence.']],
-     d:['Applicability matrix','Compliance assessment','Remediation tracker','Board summary']},
-    {k:'dpdp',t:'Meeting DPDP Act obligations',tag:'Privacy',
-     h:'DPDP readiness assessment',
-     steps:[['Inventory personal data','What you collect, why, where it lives and who sees it.'],['Review consent and notices','Check notices, consent capture and withdrawal against the Act.'],['Test safeguards','Security controls, retention and breach response process.'],['Plan the roadmap','Changes sequenced against the phased timelines in the DPDP Rules.']],
-     d:['Data inventory','Data-flow maps','Gap report','Notice templates','Breach response plan']},
-    {k:'cust',t:'Answering a customer security review',tag:'Sales',
-     h:'Security assurance package',
-     steps:[['Read the questionnaire','Understand what the customer is really checking.'],['Fix the quick gaps','Policies and controls that can be in place within weeks.'],['Test and document','Independent VAPT and a clean summary letter.'],['Plan for certification','A path to ISO 27001 or SOC 2 if customers keep asking.']],
-     d:['Completed questionnaire','Policy pack','VAPT summary','Certification roadmap']},
-    {k:'app',t:'Launching a new app or portal',tag:'Testing',
-     h:'Pre-launch security testing',
+    {t:'Launching a new app or portal',tag:'TESTING',h:'Pre-launch security testing',
      steps:[['Agree test scope','Roles, URLs, APIs and test accounts.'],['Test the application','OWASP Top 10, business logic and API abuse cases.'],['Review the platform','Server hardening and cloud configuration.'],['Retest fixes','Confirm every high and critical finding is closed before go-live.']],
-     d:['VAPT report','Cloud review','Retest report','Go-live sign-off note']}
+     d:['VAPT report','Cloud review','Retest report','Go-live sign-off note'],need:0},
+    {t:'Going live with Aadhaar authentication',tag:'UIDAI',h:'Aadhaar integration readiness',
+     steps:[['Map the flow','Trace Aadhaar data from capture to storage, display and logs.'],['Review the architecture','Data Vault, HSM key handling, PID encryption and device certification.'],['Test the application','Exposed Aadhaar numbers, weak masking and insecure APIs.'],['Build the evidence pack','Checklist, policies and screenshots ready for your AUA or auditor.']],
+     d:['Gap report','ADV/HSM review','VAPT report','Compliance checklist','Evidence pack'],need:1},
+    {t:'Getting ISO 27001 certified',tag:'ISO/IEC',h:'ISO 27001 implementation',
+     steps:[['Agree the scope','Set the ISMS boundary around what your customers care about.'],['Assess the gaps','Clause by clause and control by control against ISO 27001:2022.'],['Implement','Risk assessment, Statement of Applicability, policies and controls.'],['Audit and certify','Internal audit, management review, then Stage 1 and Stage 2 support.']],
+     d:['Gap report','Risk register','Statement of Applicability','Policy set','Internal audit report'],need:2},
+    {t:'Meeting DPDP Act obligations',tag:'PRIVACY',h:'DPDP readiness assessment',
+     steps:[['Inventory personal data','What you collect, why, where it lives and who sees it.'],['Review consent and notices','Notices, consent capture and withdrawal against the Act.'],['Test safeguards','Security controls, retention and breach response.'],['Plan the roadmap','Changes sequenced against the phased DPDP Rules timelines.']],
+     d:['Data inventory','Data-flow maps','Gap report','Notice templates','Breach response plan'],need:3},
+    {t:'Preparing for an RBI or SEBI inspection',tag:'BFSI',h:'Regulatory readiness review',
+     steps:[['Identify obligations','Directions and circulars that apply to your entity type.'],['Assess compliance','Test controls and documents against each requirement.'],['Close the gaps','Prioritised remediation plan with owners and dates.'],['Prepare for inspection','Board-ready summary and organised evidence.']],
+     d:['Applicability matrix','Compliance assessment','Remediation tracker','Board summary'],need:4},
+    {t:'Answering a customer security review',tag:'SALES',h:'Security assurance package',
+     steps:[['Read the questionnaire','Understand what the customer is really checking.'],['Fix the quick gaps','Policies and controls that can be in place within weeks.'],['Test and document','Independent VAPT and a clean summary letter.'],['Plan for certification','A path to ISO 27001 or SOC 2 if customers keep asking.']],
+     d:['Completed questionnaire','Policy pack','VAPT summary','Certification roadmap'],need:5}
   ];
   var opts=document.getElementById('finderOpts'),plan=document.getElementById('plan');
   opts.innerHTML=paths.map(function(p,i){return '<button type="button" class="opt" data-i="'+i+'" aria-pressed="'+(i===0)+'"><span>'+p.t+'</span><span class="mono">'+p.tag+'</span></button>'}).join('');
-  function show(i){
+  function show(i,anim){
     var p=paths[i];
     [].forEach.call(opts.children,function(b,j){b.setAttribute('aria-pressed',j===i)});
     plan.innerHTML='<div style="display:grid;gap:8px"><span class="eyebrow">Recommended engagement</span><h3>'+p.h+'</h3></div>'+
-      '<ol class="plan-steps">'+p.steps.map(function(s){return '<li><div><b>'+s[0]+'</b><span>'+s[1]+'</span></div></li>'}).join('')+'</ol>'+
-      '<div style="display:grid;gap:10px"><span class="mono" style="color:var(--ink-2)">You receive</span><div class="deliv">'+p.d.map(function(x){return '<span class="chip">'+x+'</span>'}).join('')+'</div></div>'+
-      '<div><a class="btn btn-primary" href="#contact" data-need="'+i+'">Discuss this with us</a></div>';
+      '<ol class="steps">'+p.steps.map(function(s){return '<li><div><b>'+s[0]+'</b><span>'+s[1]+'</span></div></li>'}).join('')+'</ol>'+
+      '<div style="display:grid;gap:10px"><span class="mono" style="color:var(--dim);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase">You receive</span><div class="deliv">'+p.d.map(function(x){return '<span class="chip">'+x+'</span>'}).join('')+'</div></div>'+
+      '<div><a class="btn btn-primary" href="#contact" data-need="'+p.need+'">Discuss this with us →</a></div>';
+    if(anim&&!reduce){plan.classList.remove('swap');void plan.offsetWidth;plan.classList.add('swap')}
   }
-  show(0);
-  opts.addEventListener('click',function(e){var b=e.target.closest('.opt');if(b)show(+b.dataset.i)});
-  var needMap=[0,1,3,2,6,4];
-  plan.addEventListener('click',function(e){var a=e.target.closest('[data-need]');if(a){document.getElementById('f-need').selectedIndex=needMap[+a.dataset.need]}});
+  show(0,false);
+  opts.addEventListener('click',function(e){var b=e.target.closest('.opt');if(b)show(+b.dataset.i,true)});
+  plan.addEventListener('click',function(e){var a=e.target.closest('[data-need]');if(a)document.getElementById('f-need').selectedIndex=+a.dataset.need});
 
-  // Enquiry form
+  /* Enquiry form */
   var form=document.getElementById('enquiry'),err=document.getElementById('formErr'),box=document.getElementById('composed'),pre=document.getElementById('composedText');
-  var email=document.getElementById('ciEmail').textContent;
-  document.getElementById('sendTo').textContent=email;
+  document.getElementById('sendTo').textContent=document.getElementById('ciEmail').textContent;
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var v=function(id){return document.getElementById(id).value.trim()};
